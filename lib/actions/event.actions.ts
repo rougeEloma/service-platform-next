@@ -51,7 +51,7 @@ export async function getEventById(eventId: string) {
 
     const event = await populateEvent(Event.findById(eventId))
 
-    if (!event) throw new Error('Event not found')
+    if (!event) throw new Error('Événement introuvable')
 
     return JSON.parse(JSON.stringify(event))
   } catch (error) {
@@ -66,7 +66,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
 
     const eventToUpdate = await Event.findById(event._id)
     if (!eventToUpdate || eventToUpdate.organizer.toHexString() !== userId) {
-      throw new Error('Unauthorized or event not found')
+      throw new Error('Non autorisé ou événement introuvable')
     }
 
     const updatedEvent = await Event.findByIdAndUpdate(
