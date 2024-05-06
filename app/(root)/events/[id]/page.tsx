@@ -81,7 +81,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
 
     {/* EVENTS with the same category */}
     <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-      <h2 className="h2-bold">Evènements similaires</h2>
+      <h2 className="h2-bold">Services similaires</h2>
 
       <Collection 
           data={relatedEvents?.data}
