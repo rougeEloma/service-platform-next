@@ -202,7 +202,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">Début :</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">Du :</p>
                       <DatePicker 
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
@@ -233,7 +233,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">Fin :</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">au :</p>
                       <DatePicker 
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
@@ -307,7 +307,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                         height={24}
                       />
 
-                      <Input placeholder="URL" {...field} className="input-field" />
+                      <Input placeholder="lien util" {...field} className="input-field" />
                     </div>
 
                   </FormControl>
@@ -325,8 +325,8 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
           className="button col-span-2 w-full"
         >
           {form.formState.isSubmitting ? (
-            'Submitting...'
-          ): `${type} Event `}</Button>
+            'en cours...'
+          ): `${type} Service `}</Button>
       </form>
     </Form>
   )
