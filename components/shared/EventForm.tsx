@@ -177,7 +177,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                         height={24}
                       />
 
-                      <Input placeholder="adresse du service" {...field} className="input-field" />
+                      <Input placeholder="communes" {...field} className="input-field" />
                     </div>
 
                   </FormControl>
